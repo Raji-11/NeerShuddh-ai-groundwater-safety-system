@@ -10,7 +10,7 @@ Data-Driven Volunteer Coordination Platform for Community Water Safety
 
 📖 API Docs: https://ais-dev-btdhj7cqc7qxyfgigwwczz-293106883282.asia-southeast1.run.app/docs
 
-💻 GitHub: 
+💻 GitHub: https://github.com/Raji-11/NeerShuddh-ai-groundwater-safety-system
 
 🌊 The Problem
 
