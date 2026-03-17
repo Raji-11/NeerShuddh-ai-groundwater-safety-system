@@ -1,119 +1,200 @@
-# NeerShuddh-ai-groundwater-safety-system
-NeerShuddh is an AI-powered groundwater monitoring platform that detects contamination early using field inputs, image uploads, and machine learning. It connects volunteers and ASHA workers to generate alerts, analyze test data, and notify officials for timely action.
+💧 NeerShuddh — AI-Powered Shield for India's Groundwater
 
-# 🌊 NeerShuddh — AI Groundwater Safety System
+Data-Driven Volunteer Coordination Platform for Community Water Safety
 
-## 🚀 Overview
-NeerShuddh is an AI-powered groundwater monitoring platform designed to detect contamination early and enable timely intervention. It connects Volunteers, ASHA Workers, and Health Officials through a real-time workflow supported by machine learning and geospatial visualization.
+🚀 Live Links
 
----
+🌐 Web App: https://neershudh-web.vercel.app
 
-## 👥 User Roles & Workflow
+⚙️ Backend API: https://ais-dev-btdhj7cqc7qxyfgigwwczz-293106883282.asia-southeast1.run.app
 
-### 🔹 1. Volunteer Module
-- Secure login for volunteers
-- Upload **strip test image**
-- Automatic extraction of basic parameters (e.g., pH)
-- Capture **geolocation (GPS)**
-- On submission:
-  - Data is stored
-  - Initial risk is evaluated
-  - Alert is sent to nearby ASHA Worker (SMS simulation)
+📖 API Docs: https://ais-dev-btdhj7cqc7qxyfgigwwczz-293106883282.asia-southeast1.run.app/docs
 
----
+💻 GitHub: 
 
-### 🔹 2. ASHA Worker Module
-- Login to view **Pending Alerts**
-- Access volunteer-submitted reports
-- Perform **detailed field testing**
+🌊 The Problem
 
-#### 🧪 Manual Chemical Input (8 Parameters)
-- Fluoride  
-- Nitrate  
-- Arsenic  
-- pH Level  
-- TDS  
-- Iron  
-- Rainfall  
-- Depth  
+India is facing a silent public health crisis.
 
-- Upload additional test images
-- Click **"AI Analysis"** to process data
+600 million Indians drink contaminated water every day — not because it looks dirty, but because the poison is invisible.
 
-#### 🤖 AI Output
-- Risk Level: **Safe / At-Risk / Dangerous**
-- Confidence Score
-- Chemical Composition Analysis
-- Health Risk Advice
-- Recommended Actions
+230 districts report excess fluoride
 
----
+153 districts report arsenic contamination
 
-### 🔹 3. Health Admin Dashboard
-- Role-based admin login
-- **District-wise contamination analysis**
-- View:
-  - Total affected villages
-  - Risk distribution (Safe / At-Risk / Dangerous)
-  - Recent submissions across regions
-- **Live Map Visualization**
-  - Color-coded markers:
-    - 🟢 Safe
-    - 🟡 At-Risk
-    - 🔴 Dangerous
-- Data-driven insights for decision making
+Nalgonda (Telangana): 1M+ affected
 
----
+25 years of groundwater data exists but doesn’t reach villages
 
-## 🔄 End-to-End Workflow
+No early warning system
 
-Volunteer Upload  
-⬇  
-AI Pre-Check + Geolocation  
-⬇  
-ASHA Worker Alert (SMS Simulation)  
-⬇  
-Manual Chemical Analysis  
-⬇  
-AI Prediction & Risk Classification  
-⬇  
-Admin Dashboard + Live Map Update  
+Detection happens only after people fall sick
 
----
+💡 Solution
 
-## 🧠 Key Features
+NeerShuddh is an AI-powered system that:
 
-- 📸 Image-based water testing input  
-- 📍 Real-time geolocation tracking  
-- 📩 Automated alert system  
-- 🧪 Multi-parameter chemical analysis  
-- 🤖 AI-powered contamination prediction  
-- 🗺️ Interactive map visualization  
-- 📊 District-level analytics dashboard  
+Predicts contamination before health damage occurs
 
----
+Enables volunteers to test water locally
 
-## 🎯 Impact
+Alerts villages using SMS (works on 2G phones)
 
-NeerShuddh enables **early detection, faster response, and informed decision-making**, helping prevent groundwater-related health risks in rural communities.
+Shows contamination on a live map dashboard
 
----
+Generates government-ready reports
 
-## 🛠️ Tech Stack
+🧠 System Workflow
+🦺 Volunteer (Water Guardian)
 
-- **Frontend:** React.js, Material UI, Google Maps API  
-- **Backend:** FastAPI (Python), Firebase  
-- **Database:** Firestore  
-- **AI/ML:** Random Forest Model  
-- **Alerts:** SMS Simulation (Twilio-ready)  
+Register and receive village assignment
 
----
+Perform strip test
 
-## 📌 Future Enhancements
+Upload image or send via SMS
 
-- Real-time IoT water sensors  
-- Advanced geospatial spread prediction  
-- Multilingual mobile support  
-- Government integration APIs  
+AI detects result (Green / Yellow / Red)
 
----
+Unsafe results trigger alert
+
+🏥 ASHA Worker
+
+Receives SMS alert
+
+Visits village
+
+Conducts 8-chemical test
+
+Uploads results
+
+AI performs detailed analysis
+
+Sends warning if water is dangerous
+
+👨‍💼 Admin
+
+Views live contamination map
+
+Analyzes trends and comparisons
+
+Exports reports
+
+🧪 Chemical Detection
+
+Fluoride
+
+Arsenic
+
+Nitrate
+
+pH
+
+TDS
+
+Iron
+
+Hardness
+
+Lead
+
+🤖 AI / ML Model
+
+Dataset: CGWB (2012–2021)
+
+Records: 6,316
+
+Algorithm: Random Forest
+
+Accuracy: 99.5%
+
+Additional techniques:
+
+Geospatial prediction
+
+Time-series forecasting
+
+🛠️ Tech Stack
+
+Frontend: React + TypeScript + Vite
+
+Styling: Tailwind CSS
+
+Backend: FastAPI (Python)
+
+ML: scikit-learn
+
+Database: Firebase
+
+Auth: Firebase Auth
+
+Maps: Google Maps API
+
+SMS: Twilio API
+
+AI: Gemini API
+
+📁 Project Structure
+neershudh/
+├── src/
+├── backend/
+├── server.ts
+├── package.json
+└── README.md
+🚀 Run Locally
+Frontend
+git clone https://github.com/Venkata-Harika09/neershudh.git
+cd neershudh
+npm install
+npm run dev
+Backend
+cd backend
+python -m venv venv
+pip install -r requirements.txt
+uvicorn main:app --reload
+📊 Dataset
+
+CGWB Groundwater Data (2012–2021)
+
+IMD Rainfall Data
+
+Census Village Data
+
+🌍 Impact
+
+600M people can be protected
+
+6.5 lakh villages covered
+
+Faster response (years → days)
+
+Zero-cost alert system
+
+🎯 SDG Goals
+
+Clean Water & Sanitation
+
+Good Health
+
+Reduced Inequalities
+
+Sustainable Cities
+
+🏆 Hackathon
+
+Event: 24-Hour Hackathon
+
+Domain: Social Impact
+
+Date: March 2026
+
+Team:
+
+Boddupalli Venkata Harika
+
+Bondada Raja sri yasaswini
+
+Malla Geetamaaduri
+
+💧 Final Note
+
+Clean water is not a privilege — it is a basic human right.
